@@ -11,6 +11,7 @@ while True:
     frame = cv2.flip(frame,  1)
     hand.find_hand(frame)
     lmlist = hand.findPosition(frame)
+    # this is how to get the coordinates of the hand
     if len(lmlist) != 0:
         x1, y1 = int(lmlist[8][1]), int(lmlist[8][2])
         x2, y2 = int(lmlist[4][1]), int(lmlist[4][2])
@@ -18,7 +19,7 @@ while True:
         
         cv2.circle(frame, (int(lmlist[8][1]), int(lmlist[8][2])),  10, (255, 0, 0), cv2.FILLED)
         cv2.circle(frame, (int(lmlist[4][1]), int(lmlist[4][2])), 10, (255, 0, 0), cv2.FILLED)
-        cv2.circle(frame, (cx, cy), 6, (255, 0, 0), cv2.FILLED)
+        
 
         
     cv2.imshow("Controller", frame)
