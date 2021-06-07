@@ -46,3 +46,11 @@ For more info, see my github page
 ```
 https://github.com/chinmay18030/MediapipeTools
 ```
+# Landmarks
+Each module detects or track something. But how to find these coordinates.Mediapipe finds the hand and plots the landmarks and gives them an id
+###Hand
+![image](https://user-images.githubusercontent.com/77487404/120963571-76a17980-c77f-11eb-83ad-cd280cf2607a.png)
+### Pose
+![image](https://user-images.githubusercontent.com/77487404/120963870-fb8c9300-c77f-11eb-8b26-6da774088527.png)
+
+You see each has an id so we use the id to find that particular landmark
